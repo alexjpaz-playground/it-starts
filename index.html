@@ -1,0 +1,21 @@
+
+<style>
+  html, body {
+    background: #000;
+  }
+</style>
+<video>
+    <source src="it-starts.mkv" type="video/mp4" autoplay>
+</video>
+
+ <script>
+   var events = ['click', 'mouseover', 'touchstart'];
+
+   events.forEach(function(evname) {
+     document.addEventListener(evname, function() { 
+       var elem = document.querySelector("video");
+
+       elem.play();
+     });
+   });
+ </script>
