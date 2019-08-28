@@ -1,21 +1,60 @@
+<html>
+  <title>It starts...</title>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-25975548-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-<style>
-  html, body {
-    background: #000;
-  }
-</style>
-<video>
-    <source src="it-starts.mkv" type="video/mp4" autoplay>
-</video>
+      gtag('config', 'UA-25975548-1');
+    </script>
+  </head>
+  <body>
 
- <script>
-   var events = ['click', 'mouseover', 'touchstart'];
+  <style>
+    html, body {
+      background: #000;
+    }
 
-   events.forEach(function(evname) {
-     document.addEventListener(evname, function() { 
-       var elem = document.querySelector("video");
+    video {
+      width: 100%;
+    }
+    
+    .flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
 
-       elem.play();
-     });
-   });
- </script>
+    @media (min-width: 768px) {
+      .flex-center {
+        max-width: 50%;
+        flex: 1;
+      }
+    }
+  </style>
+  <div class='flex'>
+    <div class='flex-center'>
+      <video>
+        <source src="it-starts.mkv" type="video/mp4" autoplay>
+      </video>
+    </div>
+  </div>
+  <script>
+    var events = ['click', 'mouseover', 'touchstart'];
+
+    events.forEach(function(evname) {
+      document.addEventListener(evname, function() { 
+        var elem = document.querySelector("video");
+
+        elem.play();
+      });
+    });
+  </script>
+  </body>
+</html>
